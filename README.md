@@ -2,6 +2,8 @@
 
 These are for both Windows/Linux, some programs will be used on both some will be used on one OS (I will specify)
 
+NOTE: THIS IS STILL A WORK IN PROGRESS ESPECIALLY FOR LINUX
+
 ## Introduction
 
 ## Programs Used
