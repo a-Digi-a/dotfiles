@@ -17,6 +17,7 @@ To see the difference an apply will make use:
 
 - Terminal: Wezterm (Windows and Linux)
 - Shell: Powershell (Windows), Fish (Linux)
+- Text Editor/IDE: Neovim 
 - Tiling Window Manager: GlazeWM (Windows), Hyprland (Linux)
 - Bar: Zebar (Windows)
 - Package manager: Winget/Scoop (Windows), Pacman/Yay (Linux)
