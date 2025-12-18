@@ -1,15 +1,7 @@
-{{- if eq .chezmoi.os "windows" }}
-{{-   $OS = "windows" }}
-{{- else if eq .chezmoi.os "linux" }}
-{{-   if eq .chezmoi.osRelease.id "arch" }}
-{{-     $OS = "linux-arch" }}
-{{-   else }}
-{{-     $OS = "linux" }}
-{{ end }}
-
-[git]
-  autoCommit = true
-  autoPush = true
+{{- $osID := .chezmoi.os -}}
+{{- if (and (eq .chezmoi.os "linux") (hasKey .chezmoi.osRelease "id")) -}}
+{{-   $osID = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id -}}
+{{- end -}}
 
 [data]
-  OS = {{ $OS }}
+  osid = {{ $osID | quote }}
