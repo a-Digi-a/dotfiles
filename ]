@@ -14,7 +14,6 @@ NOTE: THIS IS STILL A WORK IN PROGRESS (especially for linux)
 - Bar: Zebar (Windows)
 - Package manager: Winget/Scoop (Windows), Pacman/Yay (Linux)
 - Dotfiles manager: Chezmoi
-- Taskbar Styler: Windhawk (Windows using the transparent taskbar style)
 - Other Programs: Lazygit, Spicetify, Zen Browser, OBS Studio, Vencord
 
 ## 📑 Basic usage
@@ -45,13 +44,8 @@ NOTE: THIS IS STILL A WORK IN PROGRESS (especially for linux)
 |<kbd>leader</kbd> + <kbd>n</kbd>| Focus previous pane|
 |<kbd>leader</kbd> + <kbd>t</kbd>| Tile pane horizontally|
 |<kbd>leader</kbd> + <kbd>-</kbd>| Tile pane vertically|
-|<kbd>leader</kbd> + <kbd>h\j\k\l</kbd>| Focus pane left \| bottom \| top \| right|
-|<kbd>leader</kbd> + <kbd>left\down\up\right</kbd>| Resize pane left \| bottom \| top \| right|
+|<kbd>leader</kbd> + <kbd>h\j\k\l</kbd>| Focuse pane left \| bottom \| top \| right|
 |<kbd>leader</kbd> + <kbd>1\|2\|3\|4\|5\|6\|7\|8\|9\|0</kbd>| Focus pane {n}|
-
-#### NeoVim
-The <leader> key is the space bar, most commands are shown after pressing it. Other than that, "\" is used to pull up nvim tree and "jk" can be used to esc out of insert mode.
-
 ## Installation 
 
 ### Pre-install notices
