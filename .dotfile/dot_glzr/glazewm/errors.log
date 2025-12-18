@@ -1,0 +1,61 @@
+[2m2025-11-29T19:49:14.314044Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to execute 'zebar'.
+
+Error: The operation was canceled by the user. (0x800704C7)
+[2m2025-11-29T20:15:29.262379Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[3]: missing field `match` at line 228 column 5
+[2m2025-11-29T20:18:06.263689Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[2]: missing field `match` at line 216 column 5
+[2m2025-11-29T20:24:56.449538Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[1]: duplicate field `match` at line 205 column 5
+[2m2025-11-29T20:29:22.831877Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2025-11-29T20:29:33.292757Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[2]: missing field `match` at line 211 column 5
+[2m2025-11-29T20:30:03.400126Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[2]: missing field `match` at line 211 column 5
+[2m2025-11-29T20:32:04.620402Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[2]: missing field `match` at line 211 column 5
+[2m2025-11-29T20:34:45.289995Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[5]: duplicate field `match` at line 234 column 5
+[2m2025-11-29T20:35:12.663090Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[4]: duplicate field `match` at line 230 column 5
+[2m2025-11-29T20:37:50.285985Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[4]: duplicate field `match` at line 227 column 5
+[2m2025-11-29T20:39:36.289231Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[0]: duplicate field `match` at line 179 column 5
+[2m2025-11-29T20:56:21.441102Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[21]: duplicate field `bindings` at line 353 column 5
+[2m2025-11-29T21:14:43.342043Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2025-11-29T21:14:45.545036Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2025-11-30T04:08:26.972358Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-11-30T04:08:33.069807Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-11-30T04:08:34.644528Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-11-30T04:08:37.408487Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-11-30T04:08:41.334478Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-11-30T04:08:50.114590Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-11-30T04:10:16.088829Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2025-11-30T04:25:30.352031Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-11-30T15:18:55.318395Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-11-30T15:19:08.156057Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-01T18:28:01.588465Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-01T18:54:16.916479Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-12-01T18:54:21.475354Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-05T23:52:00.967302Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-09T19:11:52.173986Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-09T19:12:36.805848Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-12-10T02:37:35.754293Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-10T02:38:00.578278Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-10T21:11:50.845984Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-11T21:41:40.697618Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-11T21:41:42.669478Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-12-13T22:08:09.881929Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-13T22:18:41.931559Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-12-13T23:52:48.096602Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-14T01:25:22.892351Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-14T01:25:45.762275Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-12-14T03:59:37.409979Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-14T05:23:05.147212Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-15T05:16:02.857539Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-15T05:30:32.187258Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-15T17:37:37.531021Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-15T20:13:07.114283Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-15T20:13:11.360506Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-12-15T20:13:15.081307Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-15T22:39:23.060729Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-12-18T00:23:06.693191Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[21].commands: unrecognized subcommand
+ at line 367 column 15
+[2m2025-12-18T00:23:24.095867Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[21].commands: unrecognized subcommand
+ at line 367 column 15
+[2m2025-12-18T00:23:36.143203Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[21].commands: unrecognized subcommand
+ at line 367 column 15
+[2m2025-12-18T00:24:46.627890Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[21].commands: unrecognized subcommand
+ at line 367 column 15
+[2m2025-12-18T01:56:04.852805Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
