@@ -12,7 +12,7 @@ These are for both Windows/Linux, some programs will be used on both some will b
 - Bar: Zebar (Windows)
 - Package manager: Winget/Scoop (Windows), Pacman/Yay (Linux)
 - Dotfiles manager: Chezmoi
-- Other Programs: Lazygit, Spicetify, Zen Browser
+- Other Programs: Lazygit, Spicetify, Zen Browser, OBS Studio
 
 ## 📑 Basic usage
 
