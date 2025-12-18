@@ -1,0 +1,15 @@
+{{- if eq .chezmoi.os "windows" }}
+{{-   $OS = "windows" }}
+{{- else if eq .chezmoi.os "linux" }}
+{{-   if eq .chezmoi.osRelease.id "Arch" }}
+{{-     $OS = "linux-arch" }}
+{{-   else }}
+{{-     $OS = "linux" }}
+{{ end }}
+
+[git]
+  autoCommit = true
+  autoPush = true
+
+[data]
+  OS = {{ $OS }}
