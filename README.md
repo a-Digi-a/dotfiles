@@ -6,6 +6,13 @@ NOTE: THIS IS STILL A WORK IN PROGRESS (especially for linux)
 
 ## Introduction
 
+To update the files use:
+```Chezmoi update```
+To apply the update use: 
+```Chezmoi apply```
+To see the difference an apply will make use:
+```Chezmoi diff```
+
 ## Programs Used
 
 - Terminal: Wezterm (Windows and Linux)
