@@ -1,7 +1,7 @@
 {{- if eq .chezmoi.os "windows" }}
 {{-   $OS = "windows" }}
 {{- else if eq .chezmoi.os "linux" }}
-{{-   if eq .chezmoi.osRelease.id "Arch" }}
+{{-   if eq .chezmoi.osRelease.id "arch" }}
 {{-     $OS = "linux-arch" }}
 {{-   else }}
 {{-     $OS = "linux" }}
