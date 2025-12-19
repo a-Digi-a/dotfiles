@@ -6,12 +6,10 @@ NOTE: THIS IS STILL A WORK IN PROGRESS (especially for linux)
 
 ## Introduction
 
-To update the files use:
-```Chezmoi update```
-To apply the update use: 
-```Chezmoi apply```
-To see the difference an apply will make use:
-```Chezmoi diff```
+- To update the files use: ```chezmoi update```
+- To apply the update use: ```chezmoi apply```
+- To see the difference an apply will make use: ```chezmoi diff```
+- To add new files for your own config use: ```chezmoi add file_path```
 
 ## Programs Used
 
@@ -58,7 +56,8 @@ To see the difference an apply will make use:
 |<kbd>leader</kbd> + <kbd>1\|2\|3\|4\|5\|6\|7\|8\|9\|0</kbd>| Focus pane {n}|
 
 #### NeoVim
-The \<leader\> key is the space bar, most commands are shown after pressing it. Other than that, "\" is used to pull up nvim tree and "jk" can be used to esc out of insert mode.
+- The \<leader\> key is the space bar, most commands are shown after pressing it. 
+- "\\" is used to pull up nvim tree and "jk" can be used to esc out of insert mode.
 
 ## Installation 
 
