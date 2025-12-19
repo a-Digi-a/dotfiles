@@ -1,9 +1,11 @@
 {{ if ne .chezmoi.os "linux" }}
-.config/**
+.config/nvim/
 {{ end }}
 
 {{ if ne .chezmoi.os "windows" }}
 .glzr/**
 AppData/**
-.config/**
+.config/zebar/
+.config/glazewm/
+.config/nvim/
 {{ end }}
