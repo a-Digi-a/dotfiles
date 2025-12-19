@@ -57,7 +57,7 @@ NOTE: THIS IS STILL A WORK IN PROGRESS (especially for linux)
 
 #### NeoVim
 - The \<leader\> key is the space bar, most commands are shown after pressing it. 
-- "\\" is used to pull up nvim tree and "jk" can be used to esc out of insert mode.
+- "\\" is used to pull up nvim tree and "jk" can be used to exit insert mode.
 
 ## Installation 
 
