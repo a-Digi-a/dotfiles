@@ -1,6 +1,6 @@
 # Digi's Dotfiles!
 
-These are for both Windows/Linux, some programs will be used on both some will be used on one OS (I will specify)
+These are for both Windows/Linux!
 
 NOTE: THIS IS STILL A WORK IN PROGRESS (especially for linux)
 
@@ -15,13 +15,13 @@ To see the difference an apply will make use:
 
 ## Programs Used
 
+- Dotfiles manager: Chezmoi
 - Terminal: Wezterm (Windows and Linux)
 - Shell: Powershell (Windows), Fish (Linux)
-- Text Editor/IDE: Neovim 
+- Text Editor/IDE: Neovim (Windows and Linux) 
 - Tiling Window Manager: GlazeWM (Windows), Hyprland (Linux)
-- Bar: Zebar (Windows)
+- Bar: Zebar (Windows), Hyprland (Linux)
 - Package manager: Winget/Scoop (Windows), Pacman/Yay (Linux)
-- Dotfiles manager: Chezmoi
 - Taskbar Styler: Windhawk (Windows using the transparent taskbar style)
 - Other Programs: Lazygit, Spicetify, Zen Browser, OBS Studio, Vencord
 
@@ -77,11 +77,12 @@ The \<leader\> key is the space bar, most commands are shown after pressing it. 
 
 ### Install chezmoi and apply dotfiles
 
+- Open your terminal of choice
 - Install chezmoi from Winget with: ```winget install chezmoi``` (Windows)
 - Install chezmoi with Pacman with: ```sudo pacman -S chezmoi``` (Arch Linux)
 - Close and reopen terminal for chezmoi command to be recognized.
-- Initialize chezmoi and apply the dotfiles with: ```chezmoi init https://github.com/a-Digi-a/dotfiles.git```
-- NOTE: THIS IS STILL A WIP AND MOST LIKELY ONLY WORKS ON WINDOWS AUTOMATICALLY FOR NOW, YOU CAN STILL MANUALLY INSTALL THE DOTFILES ON LINUX
+- Initialize chezmoi with: ```chezmoi init https://github.com/a-Digi-a/dotfiles.git```
+- Apply the dotfiles with: ```chezmoi apply```
 
 ### Auto start GlazeWM & Zebar at windows start
 
@@ -97,3 +98,4 @@ The \<leader\> key is the space bar, most commands are shown after pressing it. 
 ### Other information
 
 - Special thanks to jade-tam as I used their dotfiles as a template: <https://github.com/jade-tam/dotfiles>
+- Also thanks to twpayne for creating chezmoi: <https://github.com/twpayne/chezmoi>

@@ -1,11 +1,14 @@
 {{ if ne .chezmoi.os "linux" }}
 .config/nvim/
+.config/wezterm/**
 {{ end }}
 
 {{ if ne .chezmoi.os "windows" }}
 .glzr/**
 AppData/**
-.config/zebar/
-.config/glazewm/
-.config/nvim/
+.config/zebar/**
+.config/glazewm/**
+.config/nvim/**
+.config/wezterm/**
+.wezterm.lua
 {{ end }}
