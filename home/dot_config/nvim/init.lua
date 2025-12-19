@@ -2,7 +2,9 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-require 'settings.options'
-require 'settings.keybinds'
-require 'settings.autocommands'
-require 'plugins.plugins'
+ require 'settings.options'
+ require 'settings.keybinds'
+ require 'settings.autocommands'
+ require 'plugins.plugins'
+
+vim.cmd 'colorscheme catppuccin-macchiato'

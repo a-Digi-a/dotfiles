@@ -1,5 +1,4 @@
 -- OPTIONS --
---  For more options - :help option-list
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
@@ -45,20 +44,12 @@ vim.o.timeoutlen = 300
 vim.o.splitright = true
 vim.o.splitbelow = true
 
--- Sets how neovim will display certain whitespace characters in the editor.
---  See `:help 'list'`
---  and `:help 'listchars'`
---
---  Notice listchars is set using `vim.opt` instead of `vim.o`.
---  It is very similar to `vim.o` but offers an interface for conveniently interacting with tables.
---   See `:help lua-options`
---   and `:help lua-options-guide`
-vim.o.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Change tab width
 vim.cmd 'set expandtab'
 vim.cmd 'set tabstop=2'
+
 vim.cmd 'set softtabstop=2'
 vim.cmd 'set shiftwidth=2'
 -- Preview substitutions live, as you type!
@@ -75,4 +66,4 @@ vim.o.scrolloff = 10
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
-vim.cmd 'set shell=powershell'
+--vim.cmd 'set shell=powershell'

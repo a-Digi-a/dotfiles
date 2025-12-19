@@ -1,14 +1,10 @@
-{{ if ne .chezmoi.os "linux" }}
-.config/nvim/
-.config/wezterm/**
-{{ end }}
-
-{{ if ne .chezmoi.os "windows" }}
-.glzr/**
+{{ if eq .chezmoi.os "linux" }}
+..glzr/**
 AppData/**
 .config/zebar/**
 .config/glazewm/**
-.config/nvim/**
-.config/wezterm/**
 .wezterm.lua
+{{ end }}
+
+{{ if eq .chezmoi.os "windows" }}
 {{ end }}
