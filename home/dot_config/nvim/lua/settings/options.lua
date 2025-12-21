@@ -16,7 +16,6 @@ vim.o.showmode = false
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
 vim.schedule(function()
   vim.o.clipboard = 'unnamedplus'
 end)
@@ -48,10 +47,10 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Change tab width
 vim.cmd 'set expandtab'
-vim.cmd 'set tabstop=2'
+vim.cmd 'set tabstop=4'
 
-vim.cmd 'set softtabstop=2'
-vim.cmd 'set shiftwidth=2'
+vim.cmd 'set softtabstop=4'
+vim.cmd 'set shiftwidth=4'
 -- Preview substitutions live, as you type!
 vim.o.inccommand = 'split'
 
