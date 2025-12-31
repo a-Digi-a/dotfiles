@@ -1,3 +1,6 @@
+local function enable_transparency()
+  vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+end
 return {
   { 'folke/tokyonight.nvim', lazy = true },
   { 'rebelot/kanagawa.nvim', lazy = true },
@@ -10,5 +13,12 @@ return {
   { 'olivercederborg/poimandres.nvim', lazy = true },
   { 'xero/miasma.nvim', lazy = true },
   { 'ribru17/bamboo.nvim', lazy = true },
-  { 'catppuccin/nvim', lazy = false },
+  {
+    'catppuccin/nvim',
+    lazy = false,
+    config = function()
+      vim.cmd.colorscheme 'catppuccin-macchiato'
+      enable_transparency()
+    end,
+  },
 }
