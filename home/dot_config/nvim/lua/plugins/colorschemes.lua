@@ -15,9 +15,26 @@ return {
   { 'ribru17/bamboo.nvim', lazy = true },
   {
     'catppuccin/nvim',
-    lazy = false,
+    lazy = true,
+    -- config = function()
+    -- vim.cmd.colorscheme 'catppuccin-macchiato'
+    -- enable_transparency()
+    -- end,
+  },
+  {
+    'water-sucks/darkrose.nvim',
+    lazy = true,
+    -- priority = 1000,
+    --   config = function()
+    --     vim.cmd.colorscheme 'darkrose'
+    --     enable_transparency()
+    --   end,
+  },
+
+  {
+    'rose-pine/neovim',
     config = function()
-      vim.cmd.colorscheme 'catppuccin-macchiato'
+      vim.cmd.colorscheme 'rose-pine'
       enable_transparency()
     end,
   },

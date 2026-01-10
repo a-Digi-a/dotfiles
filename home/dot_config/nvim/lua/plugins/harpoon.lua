@@ -31,9 +31,12 @@ return {
   },
   config = function()
     local harpoon = require 'harpoon'
-    vim.keymap.set('n', '<leader>a', function()
+    vim.keymap.set('n', '<leader>aa', function()
       harpoon:list():add()
     end, { desc = 'Add Harpoon Marker' })
+    vim.keymap.set('n', '<leader>as', function()
+      harpoon:list():remove()
+    end, { desc = 'Remove Harpoon Marker' })
     vim.keymap.set('n', '<C-e>', function()
       harpoon.ui:toggle_quick_menu(harpoon:list())
     end)
