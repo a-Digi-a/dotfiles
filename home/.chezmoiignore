@@ -1,4 +1,4 @@
-{{ if eq .chezmoi.os "windows" }}
+{{ if eq .chezmoi.os "linux" }}
 ..glzr/**
 AppData/**
 .config/zebar/**
@@ -6,5 +6,10 @@ AppData/**
 .wezterm.lua
 {{ end }}
 
-{{ if eq .chezmoi.os "linux" }}
+{{ if eq .chezmoi.os "windows" }}
+.config/Vencord/**
+.config/fastfetch/**
+.config/hypr/**
+.config/noctalia/**
+.config/starship/**
 {{ end }}
