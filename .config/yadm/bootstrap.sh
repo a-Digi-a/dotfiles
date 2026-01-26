@@ -63,6 +63,7 @@ install_program sakfhasf Gtk3 gtk3
 install_program sakfhasf Qt5 qt5
 install_program sakfhasf Qt6 qt6
 install_program sakfhasf HyprQt6Engine hyprqt6engine
+install_program sakfhasf Fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-common otf-ipafont adwaita-fonts ttf-jetbrains-mono-nerd ttf-cascadia-code-nerd
 
 echo Installling SDDM theme...
 echo Backing Up Old sddm.conf...
@@ -76,7 +77,6 @@ EOF
 if [ -d /usr/share/sddm/themes/Makima-SDDM/ ]; then
     break
 else
-    paru -S --noconfirm noto-fonts-cjk
     sudo git clone https://github.com/Arnau029/Makima-SDDM.git /usr/share/sddm/themes/
 fi
 
