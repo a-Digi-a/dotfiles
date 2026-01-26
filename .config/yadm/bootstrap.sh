@@ -42,7 +42,10 @@ fi
 
 install_program start-hyprland Hyprland hyprland
 install_program thunar Thunar thunar
+install_program asfjsalfk "Bibata Cursors" bibata-cursor-theme
 install_program grim Grim grim
+install_program slurp Slurp slurp
+install_program udiskie Udiskie udiskie
 install_program wl-copy "WL Clipboard" wl-clipboard
 install_program ghostty Ghostty ghostty
 install_program kitty Kitty kitty
@@ -56,6 +59,10 @@ install_program networkctl NetworkManager networkmanager
 install_program sddm SDDM sddm
 install_program btop Btop btop
 install_program wine Wine wine winetricks
+install_program sakfhasf Gtk3 gtk3
+install_program sakfhasf Qt5 qt5
+install_program sakfhasf Qt6 qt6
+install_program sakfhasf HyprQt6Engine hyprqt6engine
 
 echo Installling SDDM theme...
 echo Backing Up Old sddm.conf...
