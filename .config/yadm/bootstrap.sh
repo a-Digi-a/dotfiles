@@ -56,6 +56,7 @@ install_program tmux Tmux tmux
 install_program fastfetch FastFetch fastfetch
 install_program pipewire PipeWire pipewire
 install_program networkctl NetworkManager networkmanager 
+install_program networkctl NetworkManager networkmanager 
 install_program sddm SDDM sddm
 install_program btop Btop btop
 install_program wine Wine wine winetricks
@@ -63,6 +64,10 @@ install_program sakfhasf Gtk3 gtk3
 install_program sakfhasf Qt5 qt5
 install_program sakfhasf Qt6 qt6
 install_program sakfhasf HyprQt6Engine hyprqt6engine
+install_program sakfhasf NetworkManager networkmanager
+systemctl enable NetworkManager.service
+install_program sakfhasf Bluetooth bluez bluez-utils
+systemctl enable bluetooth.service
 install_program sakfhasf Fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-common otf-ipafont adwaita-fonts ttf-jetbrains-mono-nerd ttf-cascadia-code-nerd
 
 echo Installling SDDM theme...
