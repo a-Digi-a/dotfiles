@@ -49,6 +49,7 @@ install_program udiskie Udiskie udiskie
 install_program wl-copy "WL Clipboard" wl-clipboard
 install_program ghostty Ghostty ghostty
 install_program kitty Kitty kitty
+install_program zoxide Zoxide zoxide
 install_program qs QuickShell quickshell noctalia-shell
 install_program nvim NeoVim neovim luarocks tree-sitter-cli npm
 install_program zsh Zsh zsh starship
