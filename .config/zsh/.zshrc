@@ -8,6 +8,8 @@ eval "$(dircolors)"
 alias lsa='ls -a --color=auto'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias cp='cpg -g'
+alias mv='mvg -g'
 
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu no
