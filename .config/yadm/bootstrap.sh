@@ -82,7 +82,8 @@ EOF
 if [ -d /usr/share/sddm/themes/Makima-SDDM/ ]; then
     break
 else
-    sudo git clone https://github.com/Arnau029/Makima-SDDM.git /usr/share/sddm/themes/
+    sudo git clone https://github.com/Arnau029/Makima-SDDM.git
+	sudo mv Makima-SDDM /usr/share/sddm/themes
 fi
 
 cat << EOF
