@@ -66,6 +66,7 @@ install_program Btop btop
 install_program Wine wine winetricks
 install_program NetworkManager networkmanager
 install_program Bluetooth bluez bluez-utils
+install_program "Power Profiles Daemon" power-profiles-daemon
 install_program "Bibata Cursors" bibata-cursor-theme
 install_program  Gtk3 gtk3
 install_program  Qt5 qt5
@@ -83,8 +84,9 @@ install_program "Adwaita Font" adwaita-fonts
 
 
 
-sudo systemctl enable NetworkManager.service
-sudo systemctl enable bluetooth.service
+sudo systemctl enable --now NetworkManager.service
+sudo systemctl enable --now bluetooth.service
+sudo systemctl enable --now power-profiles-daemon
 
 
 if [ -d /usr/share/sddm/themes/Makima-SDDM/ ]; then
