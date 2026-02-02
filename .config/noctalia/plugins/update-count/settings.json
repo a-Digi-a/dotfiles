@@ -1,5 +1,5 @@
 {
-  "updateIntervalMinutes": 30,
+  "updateIntervalMinutes": 5,
   "updateTerminalCommand": "kitty -e",
   "currentIconName": "cloud-download",
   "hideOnZero": false,

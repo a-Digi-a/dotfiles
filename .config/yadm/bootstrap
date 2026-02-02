@@ -47,7 +47,7 @@ install_program() {
 # Arg 2 = program to install
 
 install_program Hyprland hyprland
-install_program Thunar thunar
+install_program Nautilus nautilus 
 install_program Grim grim
 install_program Slurp slurp
 install_program Udiskie udiskie

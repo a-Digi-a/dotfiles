@@ -77,36 +77,36 @@ body {
   --colors: on; /* off: discord default colors, on: midnight custom colors */
 
   /* text colors */
-  --text-0: #000000; /* text on colored elements */
-  --text-1: #ffe0eb; /* other normally white text */
-  --text-2: #ffe0eb; /* headings and important text */
-  --text-3: #ff8cb3; /* normal text */
-  --text-4: #724f61; /* icon buttons and channels */
-  --text-5: #45303b; /* muted channels/chats and timestamps */
+  --text-0: #2a1922; /* text on colored elements */
+  --text-1: #f3c7d7; /* other normally white text */
+  --text-2: #f3c7d7; /* headings and important text */
+  --text-3: #efdce8; /* normal text */
+  --text-4: #bd3552; /* icon buttons and channels */
+  --text-5: #812438; /* muted channels/chats and timestamps */
 
   /* background and dark colors */
-  --bg-1: #050304; /* dark buttons when clicked */
-  --bg-2: #0d070b; /* dark buttons */
-  --bg-3: #1a0f16; /* spacing, secondary elements */
-  --bg-4: #000000; /* main background color */
-  --hover: #ffe0eb15; /* channels and buttons when hovered */
-  --active: #341e2c; /* channels and buttons when clicked or selected */
-  --active-2: #000000; /* extra state for transparent buttons */
-  --message-hover: #1a0f1640; /* messages when hovered */
+  --bg-1: #311f29; /* dark buttons when clicked */
+  --bg-2: #3b2833; /* dark buttons */
+  --bg-3: #4d3745; /* spacing, secondary elements */
+  --bg-4: #2a1922; /* main background color */
+  --hover: #f3c7d715; /* channels and buttons when hovered */
+  --active: #65485a; /* channels and buttons when clicked or selected */
+  --active-2: #2a1922; /* extra state for transparent buttons */
+  --message-hover: #4d374540; /* messages when hovered */
 
   /* accent colors */
-  --accent-1: #ff8cb3; /* links and other accent text */
-  --accent-2: #d90049; /* small accent elements */
-  --accent-3: #ffb3cc; /* accent buttons */
-  --accent-4: #3a0013; /* accent buttons when hovered */
-  --accent-5: #ffb3cc; /* accent buttons when clicked */
-  --accent-new: #ff99b8; /* stuff that's normally red like mute/deafen buttons */
+  --accent-1: #f2c1d4; /* links and other accent text */
+  --accent-2: #e61a69; /* small accent elements */
+  --accent-3: #ffd6e2; /* accent buttons */
+  --accent-4: #450014; /* accent buttons when hovered */
+  --accent-5: #ffd6e2; /* accent buttons when clicked */
+  --accent-new: #ec8a92; /* stuff that's normally red like mute/deafen buttons */
 
-    --mention: linear-gradient(to right, color-mix(in hsl, #d90049, transparent 90%) 40%, transparent); /* background of messages that mention you */
-  --mention-hover: linear-gradient(to right, color-mix(in hsl, #d90049, transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
+    --mention: linear-gradient(to right, color-mix(in hsl, #e61a69, transparent 90%) 40%, transparent); /* background of messages that mention you */
+  --mention-hover: linear-gradient(to right, color-mix(in hsl, #e61a69, transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
 
-    --reply: linear-gradient(to right, color-mix(in hsl, #ff1a73, transparent 90%) 40%, transparent); /* background of messages that reply to you */
-  --reply-hover: linear-gradient(to right, color-mix(in hsl, #ff1a73, transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
+    --reply: linear-gradient(to right, color-mix(in hsl, #953065, transparent 90%) 40%, transparent); /* background of messages that reply to you */
+  --reply-hover: linear-gradient(to right, color-mix(in hsl, #953065, transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
 
   /* status indicator colors */
   --online: var(--green-2); /* change to #43a25a for default */
@@ -205,16 +205,16 @@ body {
 
 [class*="checkboxOption"]:hover [class*="checkboxIndicator"] {
   background-color: color-mix(in srgb, var(--accent-1) 20%, transparent) !important;
-  border-color: var(--accent-1) !important;
+  border-color: var(--accent-3) !important;
 }
 
 [class*="checkboxOption"][data-selected] [class*="checkboxIndicator"] {
   background-color: var(--accent-1) !important;
-  border-color: var(--accent-1) !important;
+  border-color: var(--accent-3) !important;
 }
 
 [class*="checkboxOption"][data-selected]:hover [class*="checkboxIndicator"] {
-  background-color: var(--accent-3) !important;
+  background-color: var(--accent-1) !important;
   border-color: var(--accent-3) !important;
 }
 
@@ -247,7 +247,7 @@ body {
 
 /* Inner dot (selected) */
 [class*="innerDotRadio"] {
-    fill: var(--accent-1) !important;      /* contrast dot */
+    fill: var(--accent-3) !important;      /* contrast dot */
     opacity: 0;                        /* hidden by default */
     transition: opacity 0.2s ease;
 }
@@ -281,7 +281,7 @@ body {
 
 [class*="checkboxOption"][data-selected="true"] [class*="checkStroke"],
 [class*="checkboxOption"][data-selected="true"] [class*="dot"] {
-    color: var(--accent-1) !important; /* checkmark/dot color */
+    color: var(--accent-3) !important; /* checkmark color */
 }
 
 /* Hover effect for selected checkbox */
@@ -321,4 +321,50 @@ body {
 [class*="unreadMentionsBar"] [class*="text"] {
     color: var(--text-1) !important;
     font-weight: 700;
+}
+
+/* Fix polls visibility */
+[class*="pollContainer_"] [class*="selected__"] [class*="radioForeground_"] {
+    fill: var(--accent-3) !important;
+}
+
+[class*="pollContainer_"] [class*="selected__"] {
+    border: 2px solid var(--active) !important;
+}
+
+[class*="votedStyles_"] [class*="votePercentageBar_"] {
+    background-color: var(--active-2) !important;
+    opacity: 0.5;
+}
+
+[class*="pollContainer_"] [class*="answerSelectionIcon_"] circle {
+    fill: var(--accent-3) !important;
+}
+
+[class*="pollContainer_"] [class*="votedStyles_"] [class*="answerSelectionIcon_"] path {
+    fill: var(--bg-1) !important;
+}
+
+[class*="pollContainer_"] [class*="answer__"]:not([class*="votedStyles_"]) [class*="answerSelectionIcon_"] path {
+    fill: var(--accent-1) !important;
+}
+
+[class*="pollContainer_"] [class*="votesData_"] {
+    color: var(--text-2) !important;
+}
+
+[class*="pollContainer_"] [class*="votedStyles_"] [class*="answerInner_"] {
+    border: 2px solid var(--active) !important;
+}
+
+/* Invite to server button override*/
+[class*="inviteButton_"] svg path,
+[class*="actionIcon_"] path[d^="M14.5 8a3 3 0"] {
+    fill: var(--accent-1) !important;
+    color: var(--accent-1) !important;
+}
+
+[class*="inviteButton_"]:hover svg path {
+    fill: var(--accent-3) !important;
+    color: var(--accent-3) !important;
 }

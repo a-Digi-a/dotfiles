@@ -7,7 +7,7 @@ click-repeat-interval = 500
 font-family = "CaskaydiaCove Nerd Font Mono"
 font-family = "Apple Color Emoji"
 font-size = 12
-background-opacity = 0.4
+background-opacity = 0.6
 # make it work nicely with a tiling wm
 window-decoration = false
 confirm-close-surface = false
