@@ -11,6 +11,8 @@ alias grep='grep --color=auto'
 alias cp='cpg -g'
 alias mv='mvg -g'
 
+export PATH=$PATH:~/.dotnet/tools
+
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu no
 

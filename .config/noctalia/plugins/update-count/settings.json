@@ -4,5 +4,5 @@
   "currentIconName": "cloud-download",
   "hideOnZero": false,
   "customCmdGetNumUpdates": "",
-  "customCmdDoSystemUpdate": ""
+  "customCmdDoSystemUpdate": "fastfetch & paru -Syu"
 }
