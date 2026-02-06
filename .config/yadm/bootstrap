@@ -123,6 +123,9 @@ else
     echo Advanced Copy installed!
 fi   
 
+hyprpm add https://github.com/hyprwm/hyprland-plugins
+hyprpm enable hyprscrolling
+
 cat << 'EOF'
 
 ----
