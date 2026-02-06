@@ -4,5 +4,10 @@
     "arRPC": true,
     "splashColor": "rgb(239, 220, 232)",
     "splashBackground": "rgb(42, 25, 34)",
-    "hardwareAcceleration": false
+    "hardwareAcceleration": false,
+    "spellCheckLanguages": [
+        "en-GB",
+        "en-IE",
+        "en"
+    ]
 }
