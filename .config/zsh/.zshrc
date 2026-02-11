@@ -5,6 +5,8 @@ eval "$(zoxide init zsh --cmd cd)"
 eval "$(fzf --zsh)"
 eval "$(dircolors)"
 
+export PATH=$PATH:~/.cargo/bin/
+
 alias lsa='ls -a --color=auto'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
