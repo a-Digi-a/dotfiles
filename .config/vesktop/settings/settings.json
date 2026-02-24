@@ -5,6 +5,7 @@
     "themeLinks": [],
     "eagerPatches": false,
     "enabledThemes": [
+        "DarkPink.theme.css",
         "noctalia.theme.css"
     ],
     "enableReactDevtools": false,
@@ -623,6 +624,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1771539900016
+        "settingsSyncVersion": 1771906782345
     }
 }
