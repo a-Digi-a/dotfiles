@@ -168,6 +168,12 @@
                     ]
                 },
                 {
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "VPN",
+                    "textColor": "none"
+                },
+                {
                     "deviceNativePath": "__default__",
                     "displayMode": "onhover",
                     "hideIfIdle": false,
