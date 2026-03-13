@@ -244,7 +244,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 770,
-            "zoom": 2.8000000000000003,
+            "zoom": 1.6,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -608,6 +608,9 @@
         },
         "WebContextMenus": {
             "enabled": true
+        },
+        "NoDefaultHangStatus": {
+            "enabled": false
         }
     },
     "uiElements": {
@@ -624,6 +627,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1772922262088
+        "settingsSyncVersion": 1773261777320
     }
 }
