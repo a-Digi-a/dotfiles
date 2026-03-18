@@ -1,6 +1,6 @@
 theme = noctalia
 
-command = tmux new-session -A -s 0 || zsh
+command = tmux || zsh
 shell-integration = zsh
 click-repeat-interval = 500
 # auto-update = off
