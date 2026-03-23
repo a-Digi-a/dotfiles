@@ -105,7 +105,7 @@
                     "colorizeSystemIcon": "none",
                     "customIconPath": "",
                     "enableColorization": false,
-                    "icon": "rocket",
+                    "icon": "hyprland",
                     "iconColor": "none",
                     "id": "Launcher",
                     "useDistroLogo": false
@@ -250,7 +250,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Cherry Blossom",
+        "predefinedScheme": "Eldritch",
         "schedulingMode": "off",
         "useWallpaperColors": false
     },
@@ -466,7 +466,7 @@
         "bluetoothRssiPollIntervalMs": 10000,
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
-        "networkPanelView": "wifi",
+        "networkPanelView": "ethernet",
         "wifiDetailsViewMode": "grid",
         "wifiEnabled": true
     },
@@ -696,6 +696,16 @@
         "fillMode": "crop",
         "hideWallpaperFilenames": false,
         "monitorDirectories": [
+            {
+                "directory": "/home/digi/Pictures/Wallpapers",
+                "name": "DP-1",
+                "wallpaper": ""
+            },
+            {
+                "directory": "/home/digi/Pictures/Wallpapers",
+                "name": "DP-2",
+                "wallpaper": ""
+            }
         ],
         "overviewBlur": 0.4,
         "overviewEnabled": false,
