@@ -5,7 +5,8 @@
     "themeLinks": [],
     "eagerPatches": false,
     "enabledThemes": [
-        "DarkPink.theme.css"
+        "DarkPink.theme.css",
+        "noctalia.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -243,7 +244,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 770,
-            "zoom": 5.199999999999999,
+            "zoom": 1.5999999999999992,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -626,6 +627,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1774222854466
+        "settingsSyncVersion": 1776368047474
     }
 }
