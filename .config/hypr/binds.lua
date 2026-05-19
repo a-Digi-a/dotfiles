@@ -1,73 +1,89 @@
+---@diagnostic disable: param-type-mismatch, missing-parameter
+-- Main binds
+hl.bind({ mods = mainMod, key = "RETURN", dispatcher = "exec", params = terminal })
+hl.bind({ mods = mainMod .. " SHIFT", key = "Q", dispatcher = "killactive" })
+hl.bind({
+	mods = mainMod .. " SHIFT",
+	key = "S",
+	dispatcher = "exec",
+	params = 'grim -g "$(slurp)" - | wl-copy',
+})
+hl.bind({ mods = mainMod, key = "X", dispatcher = "fullscreen" })
+hl.bind({
+	mods = mainMod,
+	key = "M",
+	dispatcher = "exec",
+	params = "command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit",
+})
+hl.bind({
+	mods = mainMod,
+	key = "E",
+	dispatcher = "exec",
+	params = fileManager,
+})
+hl.bind({ mods = mainMod, key = "T", dispatcher = "togglefloating" })
+hl.bind({ mods = mainMod, key = "W", dispatcher = "exec", params = menu })
+hl.bind({
+	mods = mainMod,
+	key = "backspace",
+	dispatcher = "exec",
+	params = "qs -c noctalia-shell ipc call sessionMenu toggle",
+})
 
-bind = $mainMod, RETURN, exec, $terminal
-bind = $mainMod SHIFT, Q, killactive,
-bind = $mainMod SHIFT, S, exec, grim -g "$(slurp)" - | wl-copy
-bind = $mainMod, X, fullscreen,
-bind = $mainMod, M, exec, command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit
-bind = $mainMod, E, exec, $fileManager
-bind = $mainMod, T, togglefloating,
-bind = $mainMod, W, exec, $menu
-bind = $mainMod, backspace, exec, qs -c noctalia-shell ipc call sessionMenu toggle 
+-- Switch workspaces
+for i = 1, 9 do
+	hl.bind({ mods = mainMod, key = tostring(i), dispatcher = "workspace", params = tostring(i) })
+end
+hl.bind({ mods = mainMod, key = "0", dispatcher = "workspace", params = "10" })
 
-# Switch workspaces with mainMod + [0-9]
-bind = $mainMod, 1, workspace, 1
-bind = $mainMod, 2, workspace, 2
-bind = $mainMod, 3, workspace, 3
-bind = $mainMod, 4, workspace, 4
-bind = $mainMod, 5, workspace, 5
-bind = $mainMod, 6, workspace, 6
-bind = $mainMod, 7, workspace, 7
-bind = $mainMod, 8, workspace, 8
-bind = $mainMod, 9, workspace, 9
-bind = $mainMod, 0, workspace, 10
+-- Move active window to workspace
+for i = 1, 9 do
+	hl.bind({ mods = mainMod .. " SHIFT", key = tostring(i), dispatcher = "movetoworkspace", params = tostring(i) })
+end
+hl.bind({ mods = mainMod .. " SHIFT", key = "0", dispatcher = "movetoworkspace", params = "10" })
 
-# Move active window to a workspace with mainMod + SHIFT + [0-9]
-bind = $mainMod SHIFT, 1, movetoworkspace, 1
-bind = $mainMod SHIFT, 2, movetoworkspace, 2
-bind = $mainMod SHIFT, 3, movetoworkspace, 3
-bind = $mainMod SHIFT, 4, movetoworkspace, 4
-bind = $mainMod SHIFT, 5, movetoworkspace, 5
-bind = $mainMod SHIFT, 6, movetoworkspace, 6
-bind = $mainMod SHIFT, 7, movetoworkspace, 7
-bind = $mainMod SHIFT, 8, movetoworkspace, 8
-bind = $mainMod SHIFT, 9, movetoworkspace, 9
-bind = $mainMod SHIFT, 0, movetoworkspace, 10
+-- Move workspace to monitor
+hl.bind({ mods = mainMod, key = "a", dispatcher = "movecurrentworkspacetomonitor", params = "l" })
+hl.bind({ mods = mainMod, key = "f", dispatcher = "movecurrentworkspacetomonitor", params = "r" })
+hl.bind({ mods = mainMod, key = "d", dispatcher = "movecurrentworkspacetomonitor", params = "u" })
+hl.bind({ mods = mainMod, key = "s", dispatcher = "movecurrentworkspacetomonitor", params = "d" })
 
-# Move workspace
-bind = $mainMod, a, movecurrentworkspacetomonitor, l
-bind = $mainMod, f, movecurrentworkspacetomonitor, r
-bind = $mainMod, d, movecurrentworkspacetomonitor, u
-bind = $mainMod, s, movecurrentworkspacetomonitor, d
+-- Move focus
+hl.bind({ mods = mainMod, key = "h", dispatcher = "movefocus", params = "l" })
+hl.bind({ mods = mainMod, key = "l", dispatcher = "movefocus", params = "r" })
+hl.bind({ mods = mainMod, key = "k", dispatcher = "movefocus", params = "u" })
+hl.bind({ mods = mainMod, key = "j", dispatcher = "movefocus", params = "d" })
 
-# Move Focus
-bind = $mainMod, h, movefocus, l
-bind = $mainMod, l, movefocus, r
-bind = $mainMod, k, movefocus, u
-bind = $mainMod, j, movefocus, d
+-- Move window
+hl.bind({ mods = mainMod .. " SHIFT", key = "h", dispatcher = "movewindow", params = "l" })
+hl.bind({ mods = mainMod .. " SHIFT", key = "l", dispatcher = "movewindow", params = "r" })
+hl.bind({ mods = mainMod .. " SHIFT", key = "k", dispatcher = "movewindow", params = "u" })
+hl.bind({ mods = mainMod .. " SHIFT", key = "j", dispatcher = "movewindow", params = "d" })
 
-# Move Window
-bind = $mainMod SHIFT, h, movewindow, l
-bind = $mainMod SHIFT, l, movewindow, r
-bind = $mainMod SHIFT, k, movewindow, u
-bind = $mainMod SHIFT, j, movewindow, d
+-- Move/resize with mouse
+hl.bindm({ mods = mainMod, key = "mouse:272", dispatcher = "movewindow" })
+hl.bindm({ mods = mainMod, key = "mouse:273", dispatcher = "resizewindow" })
 
+-- Media / brightness keys
+hl.bindel({ mods = "", key = "XF86AudioRaiseVolume", dispatcher = "exec", params = "playerctl next" })
+hl.bindel({ mods = "", key = "XF86AudioLowerVolume", dispatcher = "exec", params = "playerctl previous" })
+hl.bindel({
+	mods = "",
+	key = "XF86AudioMute",
+	dispatcher = "exec",
+	params = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+})
+hl.bindel({
+	mods = "",
+	key = "XF86AudioMicMute",
+	dispatcher = "exec",
+	params = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+})
+hl.bindel({ mods = "", key = "XF86MonBrightnessUp", dispatcher = "exec", params = "brightnessctl -e4 -n2 set 5%+" })
+hl.bindel({ mods = "", key = "XF86MonBrightnessDown", dispatcher = "exec", params = "brightnessctl -e4 -n2 set 5%-" })
 
-# Move/resize windows with mainMod + LMB/RMB and dragging
-bindm = $mainMod, mouse:272, movewindow
-bindm = $mainMod, mouse:273, resizewindow
-
-# Laptop multimedia keys for volume and LCD brightness
-# bindel = ,XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
-bindel = ,XF86AudioRaiseVolume, exec, playerctl next
-# bindel = ,XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-bindel = ,XF86AudioLowerVolume, exec, playerctl previous
-bindel = ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-bindel = ,XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
-bindel = ,XF86MonBrightnessUp, exec, brightnessctl -e4 -n2 set 5%+
-bindel = ,XF86MonBrightnessDown, exec, brightnessctl -e4 -n2 set 5%-
-
-# Requires playerctl
-bindl = , XF86AudioNext, exec, playerctl next
-bindl = , XF86AudioPause, exec, playerctl play-pause
-bindl = , XF86AudioPlay, exec, playerctl play-pause
-bindl = , XF86AudioPrev, exec, playerctl previous
+-- Playerctl
+hl.bindl({ mods = "", key = "XF86AudioNext", dispatcher = "exec", params = "playerctl next" })
+hl.bindl({ mods = "", key = "XF86AudioPause", dispatcher = "exec", params = "playerctl play-pause" })
+hl.bindl({ mods = "", key = "XF86AudioPlay", dispatcher = "exec", params = "playerctl play-pause" })
+hl.bindl({ mods = "", key = "XF86AudioPrev", dispatcher = "exec", params = "playerctl previous" })

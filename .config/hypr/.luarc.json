@@ -5,6 +5,7 @@
     ]
   },
   "diagnostics": {
-    "globals": ["hl"]
+    "globals": ["hl"],
+    "disable": ["param-type-mismatch", "missing-parameter"]
   }
 }

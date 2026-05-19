@@ -1,8 +1,12 @@
 -- Variables
 
-local terminal = "ghostty"
-local fileManager = "nautilus"
-local menu = "qs -c noctalia-shell ipc call launcher toggle"
-local mainMod = "SUPER"
+terminal = "ghostty"
+fileManager = "nautilus"
+menu = "qs -c noctalia-shell ipc call launcher toggle"
+mainMod = "SUPER"
 
 -- Import Other Files
+
+require("config")
+require("binds")
+require("env-vars")
