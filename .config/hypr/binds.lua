@@ -25,10 +25,10 @@ end
 hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = 10 }))
 
 -- Move workspace to monitor
--- hl.bind(mainMod .. " + a", hl.dsp.workspace.move_to_monitor({ direction = "l" }))
--- hl.bind(mainMod .. " + f", hl.dsp.workspace.move_to_monitor({ direction = "r" }))
--- hl.bind(mainMod .. " + d", hl.dsp.workspace.move_to_monitor({ direction = "u" }))
--- hl.bind(mainMod .. " + s", hl.dsp.workspace.move_to_monitor({ direction = "d" }))
+hl.bind(mainMod .. " + a", hl.dsp.workspace.move({ monitor = "l" }))
+hl.bind(mainMod .. " + f", hl.dsp.workspace.move({ monitor = "r" }))
+hl.bind(mainMod .. " + d", hl.dsp.workspace.move({ monitor = "u" }))
+hl.bind(mainMod .. " + s", hl.dsp.workspace.move({ monitor = "d" }))
 
 -- Move focus
 hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "l" }))
