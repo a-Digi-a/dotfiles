@@ -1,89 +1,77 @@
----@diagnostic disable: param-type-mismatch, missing-parameter
 -- Main binds
-hl.bind({ mods = mainMod, key = "RETURN", dispatcher = "exec", params = terminal })
-hl.bind({ mods = mainMod .. " SHIFT", key = "Q", dispatcher = "killactive" })
-hl.bind({
-	mods = mainMod .. " SHIFT",
-	key = "S",
-	dispatcher = "exec",
-	params = 'grim -g "$(slurp)" - | wl-copy',
-})
-hl.bind({ mods = mainMod, key = "X", dispatcher = "fullscreen" })
-hl.bind({
-	mods = mainMod,
-	key = "M",
-	dispatcher = "exec",
-	params = "command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit",
-})
-hl.bind({
-	mods = mainMod,
-	key = "E",
-	dispatcher = "exec",
-	params = fileManager,
-})
-hl.bind({ mods = mainMod, key = "T", dispatcher = "togglefloating" })
-hl.bind({ mods = mainMod, key = "W", dispatcher = "exec", params = menu })
-hl.bind({
-	mods = mainMod,
-	key = "backspace",
-	dispatcher = "exec",
-	params = "qs -c noctalia-shell ipc call sessionMenu toggle",
-})
+hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.window.close())
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd('grim -g "$(slurp)" - | wl-copy'))
+hl.bind(mainMod .. " + X", hl.dsp.window.fullscreen())
+hl.bind(
+	mainMod .. " + M",
+	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit")
+)
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + T", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + backspace", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call sessionMenu toggle"))
 
 -- Switch workspaces
 for i = 1, 9 do
-	hl.bind({ mods = mainMod, key = tostring(i), dispatcher = "workspace", params = tostring(i) })
+	hl.bind(mainMod .. " + " .. i, hl.dsp.focus({ workspace = i }))
 end
-hl.bind({ mods = mainMod, key = "0", dispatcher = "workspace", params = "10" })
+hl.bind(mainMod .. " + 0", hl.dsp.focus({ workspace = 10 }))
 
 -- Move active window to workspace
 for i = 1, 9 do
-	hl.bind({ mods = mainMod .. " SHIFT", key = tostring(i), dispatcher = "movetoworkspace", params = tostring(i) })
+	hl.bind(mainMod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }))
 end
-hl.bind({ mods = mainMod .. " SHIFT", key = "0", dispatcher = "movetoworkspace", params = "10" })
+hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = 10 }))
 
 -- Move workspace to monitor
-hl.bind({ mods = mainMod, key = "a", dispatcher = "movecurrentworkspacetomonitor", params = "l" })
-hl.bind({ mods = mainMod, key = "f", dispatcher = "movecurrentworkspacetomonitor", params = "r" })
-hl.bind({ mods = mainMod, key = "d", dispatcher = "movecurrentworkspacetomonitor", params = "u" })
-hl.bind({ mods = mainMod, key = "s", dispatcher = "movecurrentworkspacetomonitor", params = "d" })
+hl.bind(mainMod .. " + a", hl.dsp.workspace.move_to_monitor({ direction = "l" }))
+hl.bind(mainMod .. " + f", hl.dsp.workspace.move_to_monitor({ direction = "r" }))
+hl.bind(mainMod .. " + d", hl.dsp.workspace.move_to_monitor({ direction = "u" }))
+hl.bind(mainMod .. " + s", hl.dsp.workspace.move_to_monitor({ direction = "d" }))
 
 -- Move focus
-hl.bind({ mods = mainMod, key = "h", dispatcher = "movefocus", params = "l" })
-hl.bind({ mods = mainMod, key = "l", dispatcher = "movefocus", params = "r" })
-hl.bind({ mods = mainMod, key = "k", dispatcher = "movefocus", params = "u" })
-hl.bind({ mods = mainMod, key = "j", dispatcher = "movefocus", params = "d" })
+hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "l" }))
+hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "r" }))
+hl.bind(mainMod .. " + k", hl.dsp.focus({ direction = "u" }))
+hl.bind(mainMod .. " + j", hl.dsp.focus({ direction = "d" }))
 
 -- Move window
-hl.bind({ mods = mainMod .. " SHIFT", key = "h", dispatcher = "movewindow", params = "l" })
-hl.bind({ mods = mainMod .. " SHIFT", key = "l", dispatcher = "movewindow", params = "r" })
-hl.bind({ mods = mainMod .. " SHIFT", key = "k", dispatcher = "movewindow", params = "u" })
-hl.bind({ mods = mainMod .. " SHIFT", key = "j", dispatcher = "movewindow", params = "d" })
+hl.bind(mainMod .. " + SHIFT + h", hl.dsp.window.move({ direction = "l" }))
+hl.bind(mainMod .. " + SHIFT + l", hl.dsp.window.move({ direction = "r" }))
+hl.bind(mainMod .. " + SHIFT + k", hl.dsp.window.move({ direction = "u" }))
+hl.bind(mainMod .. " + SHIFT + j", hl.dsp.window.move({ direction = "d" }))
 
 -- Move/resize with mouse
-hl.bindm({ mods = mainMod, key = "mouse:272", dispatcher = "movewindow" })
-hl.bindm({ mods = mainMod, key = "mouse:273", dispatcher = "resizewindow" })
+hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
+hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- Media / brightness keys
-hl.bindel({ mods = "", key = "XF86AudioRaiseVolume", dispatcher = "exec", params = "playerctl next" })
-hl.bindel({ mods = "", key = "XF86AudioLowerVolume", dispatcher = "exec", params = "playerctl previous" })
-hl.bindel({
-	mods = "",
-	key = "XF86AudioMute",
-	dispatcher = "exec",
-	params = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-})
-hl.bindel({
-	mods = "",
-	key = "XF86AudioMicMute",
-	dispatcher = "exec",
-	params = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
-})
-hl.bindel({ mods = "", key = "XF86MonBrightnessUp", dispatcher = "exec", params = "brightnessctl -e4 -n2 set 5%+" })
-hl.bindel({ mods = "", key = "XF86MonBrightnessDown", dispatcher = "exec", params = "brightnessctl -e4 -n2 set 5%-" })
+hl.bind(
+	"XF86AudioRaiseVolume",
+	hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
+	{ locked = true, repeating = true }
+)
+hl.bind(
+	"XF86AudioLowerVolume",
+	hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),
+	{ locked = true, repeating = true }
+)
+hl.bind(
+	"XF86AudioMute",
+	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
+	{ locked = true, repeating = true }
+)
+hl.bind(
+	"XF86AudioMicMute",
+	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
+	{ locked = true, repeating = true }
+)
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), { locked = true, repeating = true })
 
 -- Playerctl
-hl.bindl({ mods = "", key = "XF86AudioNext", dispatcher = "exec", params = "playerctl next" })
-hl.bindl({ mods = "", key = "XF86AudioPause", dispatcher = "exec", params = "playerctl play-pause" })
-hl.bindl({ mods = "", key = "XF86AudioPlay", dispatcher = "exec", params = "playerctl play-pause" })
-hl.bindl({ mods = "", key = "XF86AudioPrev", dispatcher = "exec", params = "playerctl previous" })
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
+hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
+hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })

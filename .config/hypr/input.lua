@@ -1,0 +1,26 @@
+-- Input
+hl.config({
+	input = {
+		kb_layout = "us",
+		kb_variant = "",
+		kb_model = "",
+		kb_options = "grp:alt_shift_toggle",
+		kb_rules = "",
+		-- repeat_rate = 35,
+		-- repeat_delay = 200,
+		follow_mouse = 1,
+		sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
+		touchpad = {
+			natural_scroll = false,
+		},
+	},
+	cursor = {
+		inactive_timeout = 30,
+		no_hardware_cursors = true,
+	},
+})
+
+hl.device({
+	name = "pixa3854:00-093a:0274-touchpad",
+	sensitivity = 0,
+})

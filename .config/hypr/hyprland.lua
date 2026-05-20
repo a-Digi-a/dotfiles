@@ -1,25 +1,15 @@
--- Hyprland.lua
+-- Variables
 
--- ---------------------------------------------
--- Monitors
+terminal = "ghostty"
+fileManager = "nautilus"
+menu = "qs -c noctalia-shell ipc call launcher toggle"
+mainMod = "SUPER"
 
-hl.monitor({
-	output = "DP-1",
-	mode = "1920x1080@144",
-	position = "0x0",
-	scale = 1,
-})
+-- Import Other Files
 
-hl.monitor({
-	output = "DP-2",
-	mode = "1920x1080@144",
-	position = "1920x0",
-	scale = 1,
-})
-
-hl.monitor({
-	output = "DP-1",
-	mode = "1920x1080@60",
-	position = "0x0",
-	scale = 2,
-})
+require("config")
+require("binds")
+require("env-vars")
+-- require("workspaces")
+require("window-rules")
+require("input")
