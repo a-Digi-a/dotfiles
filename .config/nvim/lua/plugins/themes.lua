@@ -3,6 +3,7 @@ local function enable_transparency()
 end
 
 return {
+
 	{
 		"folke/tokyonight.nvim",
 		lazy = true,
@@ -16,7 +17,7 @@ return {
 		"rebelot/kanagawa.nvim",
 		lazy = true,
 		-- config = function()
-		--     vim.cmd.colorscheme("kanagawa")
+		-- vim.cmd.colorscheme("kanagawa")
 		--     enable_transparency()
 		-- end,
 	},
@@ -41,11 +42,12 @@ return {
 
 	{
 		"olimorris/onedarkpro.nvim",
-		lazy = true,
-		-- config = function()
-		-- 	vim.cmd.colorscheme("onedark")
-		-- 	enable_transparency()
-		-- end,
+		-- lazy = true,
+		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme("vaporwave")
+			-- 	enable_transparency()
+		end,
 	},
 
 	{
@@ -96,8 +98,9 @@ return {
 	{
 		"catppuccin/nvim",
 		lazy = true,
+		-- priority = 1000,
 		-- config = function()
-		-- vim.cmd.colorscheme 'catppuccin-macchiato'
+		-- vim.cmd.colorscheme("catppuccin-macchiato")
 		-- enable_transparency()
 		-- end,
 	},
@@ -114,11 +117,11 @@ return {
 
 	{
 		"rose-pine/neovim",
-		-- lazy = true,
-		config = function()
-			vim.cmd.colorscheme("rose-pine")
-			enable_transparency()
-		end,
+		lazy = true,
+		-- config = function()
+		-- vim.cmd.colorscheme("rose-pine")
+		-- 	enable_transparency()
+		-- end,
 	},
 
 	{

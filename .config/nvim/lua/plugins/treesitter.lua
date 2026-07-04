@@ -2,6 +2,7 @@ return {
 
 	{ -- Highlight, edit, and navigate code
 		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
 		config = function()
 			local filetypes = {
 				"bash",
@@ -15,6 +16,9 @@ return {
 				"query",
 				"vim",
 				"vimdoc",
+				"python",
+				"rust",
+				"cpp",
 			}
 			require("nvim-treesitter").install(filetypes)
 			vim.api.nvim_create_autocmd("FileType", {

@@ -178,7 +178,8 @@
             "emojiSize": 48,
             "hyperLinkText": "{{NAME}}",
             "useHyperLinks": true,
-            "disableEmbedPermissionCheck": false
+            "disableEmbedPermissionCheck": false,
+            "stickerSize": 160
         },
         "FakeProfileThemes": {
             "enabled": false
@@ -585,7 +586,8 @@
         },
         "Settings": {
             "enabled": true,
-            "settingsLocation": "aboveNitro"
+            "settingsLocation": "aboveNitro",
+            "includeVencordInfoWhenCopying": true
         },
         "SupportHelper": {
             "enabled": true
@@ -636,6 +638,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1778288764746
-    }
+        "settingsSyncVersion": 1781819596435
+    },
+    "windowsMaterial": "none"
 }

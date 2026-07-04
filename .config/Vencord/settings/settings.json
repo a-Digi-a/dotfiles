@@ -42,7 +42,7 @@
             "enabled": true
         },
         "ServerListAPI": {
-            "enabled": false
+            "enabled": true
         },
         "UserSettingsAPI": {
             "enabled": true
@@ -297,9 +297,6 @@
             "logDeletes": true,
             "inlineEdits": true
         },
-        "MessageTags": {
-            "enabled": false
-        },
         "MoreQuickReactions": {
             "enabled": false
         },
@@ -403,7 +400,7 @@
             "enabled": false
         },
         "ReadAllNotificationsButton": {
-            "enabled": false
+            "enabled": true
         },
         "RelationshipNotifier": {
             "enabled": false
@@ -587,9 +584,22 @@
         },
         "Settings": {
             "enabled": true,
-            "settingsLocation": "aboveNitro"
+            "settingsLocation": "aboveNitro",
+            "includeVencordInfoWhenCopying": true
         },
         "SupportHelper": {
+            "enabled": true
+        },
+        "CustomCommands": {
+            "enabled": false
+        },
+        "CharacterCounter": {
+            "enabled": false
+        },
+        "NoMiddleClickPaste": {
+            "enabled": false
+        },
+        "ConcatenatedComponentExtractor": {
             "enabled": true
         }
     },
@@ -607,6 +617,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1768059236095
-    }
+        "settingsSyncVersion": 1783096954480
+    },
+    "windowsMaterial": "none"
 }

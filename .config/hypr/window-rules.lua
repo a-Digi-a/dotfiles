@@ -1,5 +1,5 @@
 -- Window Rules
-hl.window_rule({ name = "move-obs", match = { class = "com.obsproject.Studio" }, workspace = 6 })
+hl.window_rule({ name = "move-obs", match = { class = "com.obsproject.Studio" }, workspace = 2 })
 hl.window_rule({ name = "move-vesktop", match = { class = "vesktop" }, workspace = 3 })
 hl.window_rule({ name = "move-discord", match = { class = "discord" }, workspace = 3 })
 hl.window_rule({ name = "move-zen", match = { class = "zen" }, workspace = 4 })
