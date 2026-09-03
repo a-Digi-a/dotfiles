@@ -10,7 +10,8 @@ hl.bind(
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + T", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + backspace", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call sessionMenu toggle"))
+-- hl.bind(mainMod .. " + backspace", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call sessionMenu toggle"))
+hl.bind(mainMod .. " + backspace", hl.dsp.exec_cmd("noctalia msg panel-toggle session"))
 
 -- Switch workspaces
 for i = 1, 9 do

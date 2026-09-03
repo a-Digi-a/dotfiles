@@ -5,11 +5,9 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("zen-browser", { workspace = 4 })
 	hl.exec_cmd("spotify", { workspace = 5 })
 
-	hl.exec_cmd("QT_QPA_PLATFORMTHEME=gtk3 qs -c noctalia-shell")
+	hl.exec_cmd("noctalia")
 	hl.exec_cmd("udiskie")
 
-	-- XDG Desktop Portal Fix
-	hl.exec_cmd(
-		"bash -c 'sleep 1 && killall -e xdg-desktop-portal-hyprland; killall xdg-desktop-portal; /usr/lib/xdg-desktop-portal-hyprland & sleep 2 && /usr/lib/xdg-desktop-portal &'"
-	)
+	hl.exec_cmd("easyeffects --gapplication-service")
+	hl.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 0.35")
 end)

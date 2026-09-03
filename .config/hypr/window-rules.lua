@@ -5,6 +5,12 @@ hl.window_rule({ name = "move-discord", match = { class = "discord" }, workspace
 hl.window_rule({ name = "move-zen", match = { class = "zen" }, workspace = 4 })
 hl.window_rule({ name = "move-spotify", match = { class = "spotify" }, workspace = 5 })
 
+hl.window_rule({
+	name = "cephalon-kronos-no-blur",
+	match = { class = "Cephalon-kronos", initial_title = "Cephalon Kronos Overlay" },
+	no_blur = true,
+})
+
 -- Ignore maximize requests from all apps.
 hl.window_rule({
 	name = "suppress-maximize-events",
@@ -42,4 +48,11 @@ hl.layer_rule({
 	ignore_alpha = 0.5,
 	blur = true,
 	blur_popups = true,
+})
+
+-- Noctalia Settings
+hl.window_rule({
+	match = { class = "dev.noctalia.Noctalia" },
+	float = true,
+	size = { 1080, 920 },
 })
