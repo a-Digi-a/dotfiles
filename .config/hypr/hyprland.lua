@@ -17,5 +17,6 @@ require("autostart")
 require("monitors")
 require("visuals")
 
+
 -- For Noctalia Color templates
 require("noctalia").apply_theme()
