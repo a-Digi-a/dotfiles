@@ -1,3 +1,3 @@
 return {
-	--"andweeb/presence.nvim",
+	"vyfor/cord.nvim",
 }

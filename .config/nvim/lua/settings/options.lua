@@ -74,14 +74,7 @@ vim.opt.foldtext = ""
 vim.opt.fillchars:append("fold: ")
 vim.opt.foldlevelstart = 99
 vim.cmd("set foldcolumn=1")
-vim.opt.fillchars = {
-	foldopen = "",
-	foldclose = "",
-	fold = " ",
-	foldsep = " ",
-	diff = "╱",
-	eob = " ",
-}
+vim.opt.fillchars = { foldopen = "", foldclose = "", fold = " ", foldsep = " ", diff = "╱", eob = " " }
 
 local fcs = vim.opt.fillchars:get()
 local function get_fold(lnum)
@@ -95,5 +88,3 @@ _G.get_statuscol = function()
 	return "%s%l " .. get_fold(vim.v.lnum) .. " "
 end
 vim.o.statuscolumn = "%!v:lua.get_statuscol()"
-
---vim.cmd 'set shell=powershell'
