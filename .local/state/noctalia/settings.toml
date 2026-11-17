@@ -1,4 +1,4 @@
-config_version = 13
+config_version = 20
 
 [bar.default]
 background_opacity = 0.92999997921288013
@@ -17,7 +17,7 @@ thickness = 28
     accordion = false
     accordion_direction = "end"
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g2"
     members = [ "cpu" ]
     opacity = 0.0
@@ -27,7 +27,7 @@ thickness = 28
     accordion = false
     accordion_direction = "end"
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g1"
     members = [ "launcher" ]
     opacity = 0.0
@@ -37,7 +37,7 @@ thickness = 28
     accordion = false
     accordion_direction = "end"
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g3"
     members = [ "clock" ]
     opacity = 0.0
@@ -47,7 +47,7 @@ thickness = 28
     accordion = false
     accordion_direction = "end"
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g6"
     members = [ "network" ]
     opacity = 0.0
@@ -57,7 +57,7 @@ thickness = 28
     accordion = false
     accordion_direction = "end"
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g7"
     members = [ "notifications" ]
     opacity = 0.0
@@ -67,7 +67,7 @@ thickness = 28
     accordion = false
     accordion_direction = "end"
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g8"
     members = [ "clipboard" ]
     opacity = 0.0
@@ -77,7 +77,7 @@ thickness = 28
     accordion = false
     accordion_direction = "end"
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g9"
     members = [ "battery" ]
     opacity = 0.0
@@ -87,7 +87,7 @@ thickness = 28
     accordion = false
     accordion_direction = "end"
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g10"
     members = [ "volume" ]
     opacity = 0.0
@@ -97,7 +97,7 @@ thickness = 28
     accordion = false
     accordion_direction = "end"
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g11"
     members = [ "control-center" ]
     opacity = 0.0
@@ -107,7 +107,7 @@ thickness = 28
     accordion = false
     accordion_direction = "end"
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g5"
     members = [ "widget" ]
     opacity = 0.0
@@ -117,7 +117,7 @@ thickness = 28
     accordion = false
     accordion_direction = "end"
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g4"
     members = [ "temp" ]
     opacity = 0.0
@@ -127,7 +127,7 @@ thickness = 28
     accordion = false
     accordion_direction = "end"
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g12"
     members = [ "ram" ]
     opacity = 0.0
@@ -190,7 +190,7 @@ widget_order = [ "lockscreen-login-box@DP-2", "lockscreen-login-box@DP-1" ]
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -217,7 +217,7 @@ widget_order = [ "lockscreen-login-box@DP-2", "lockscreen-login-box@DP-1" ]
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -246,10 +246,10 @@ server_url = "https://vaultwarden.digi-a.org/"
 
 [plugins]
 auto_update = "all"
-enabled = [ "noctalia/bitwarden", "yuuto/arch-updater" ]
+enabled = []
 
 [shell]
-corner_radius_scale = 2.0
+corner_radius_scale = 1.7500000260770321
 font_family = "CaskaydiaCove Nerd Font"
 polkit_agent = true
 screen_time_enabled = true
@@ -262,6 +262,7 @@ screen_time_enabled = true
 
 [theme]
 builtin = "Eldritch"
+community_palette = "Rosey AMOLED"
 
     [theme.templates]
     builtin_ids = [ "btop", "gtk3", "gtk4", "ghostty", "hyprland", "kcolorscheme", "kitty", "qt", "starship" ]

@@ -52,6 +52,7 @@ setopt hist_ignore_dups
 zstyle ':completion:*' matcher-list 'm: {a-z}={A-Za-z}'
 
 autoload -U compinit && compinit
+export PATH="$HOME/.local/bin:$PATH"
 
 zinit cdreplay -q
 
